@@ -1,0 +1,101 @@
+.column1{
+    float: left;
+    width: 500px;
+}
+
+.column2{
+    float: left;
+    width: 150px;
+    height: 700px;
+}
+
+nav{
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.cont{
+    height: 500px;
+    display: flex; 
+}
+
+.rangecont{
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+td:first-child{
+    text-align: right;
+    font-size: 20px;
+}
+
+.domino {
+    margin: auto;
+    vertical-align: middle;
+    width: 100px; 
+	border: 2px solid #C0C0C0;
+}
+
+.dominohalf {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+
+.dominohalf2 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: black;
+}
+
+.dominomenu{
+    margin: auto;
+    vertical-align: middle;
+    width: 100px; 
+}
+
+.menuitem{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: black;
+    border: 2px solid gray;
+    margin-bottom: -2px;
+}
+
+.dominopoint {
+    position: absolute;   
+    width : 16%;
+    height: 16%;
+    background: white;
+    border-radius: 50%;
+}
+
+.vcenter {
+    top: 42%;
+}
+
+.gcenter {
+    left: 42%;
+}
+
+.vtop {
+    top: 17%;
+}
+
+.vbottom {
+    bottom: 17%;
+}
+
+.gleft {
+    left: 17%;
+}
+
+.gright {
+    right: 17%;
+}

@@ -1,0 +1,53 @@
+<div class="column1">
+    <div>
+      <nav>
+        <a href="#" (click)="rotationdomino(false)">↰</a>
+        <a href="#" (click)="newDomino()">New</a>
+        <a href="#" (click)="rotationdomino(true)">↱</a>
+      </nav>
+    </div>
+
+    <div class="cont" >
+        <div class="domino" id="domino">
+          <div *ngFor="let di of divs" [ngClass]="di.divclass">
+            <ng-container *ngFor="let po of points">
+              <ng-container *ngIf="showpoint(di.id, po.halfid)">
+                <div [ngClass]="po.divclass">
+                </div>
+              </ng-container>  
+            </ng-container>
+          </div>
+        </div>
+    </div>
+
+    <div class="rangecont">
+      <table>
+        <tr>
+          <td>
+            Size
+          </td>  
+          <td>
+            <input type="range" min="0.5" max="2" step="0.5" value="1" (change)="setSize($event.target.value)">
+          </td>  
+        </tr>
+        <tr>
+          <td>
+            Speed
+          </td>  
+          <td>
+            <input type="range" min="0.5" max="2" step="0.5" value="1" (change)="setSpeed($event.target.value)">
+          </td>  
+        </tr>
+      </table>  
+    </div>
+    
+</div>
+
+<div class="column2">
+        <div class="dominomenu" id="dominomenu" *ngIf="showmenudomino">
+          <div *ngFor="let di of dommenu" Class="menuitem" attr.id="{{di.idd}}" (click)="domadd(di.idd)" >
+                <div *ngFor="let po of dominopoints[di.idd-1]" [ngClass]="'dominopoint ' + po">
+                </div>
+          </div>
+        </div>
+</div>
